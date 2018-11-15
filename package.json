@@ -6,11 +6,19 @@
   "gx": {
     "dvcsimport": "github.com/lanzafame/go-libp2p-ocgorpc"
   },
+  "gxDependencies": [
+    {
+      "author": "hsanjuan",
+      "hash": "QmPaUAU3h94RXAnJAq7JPy3QhGbdHoLbBWkxdvZo1QxqUu",
+      "name": "go-libp2p-gorpc",
+      "version": "1.1.0"
+    }
+  ],
   "gxVersion": "0.14.0",
   "language": "go",
   "license": "",
   "name": "go-libp2p-ocgorpc",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
 
