@@ -1,0 +1,16 @@
+{
+  "author": "lanzafame",
+  "bugs": {
+    "url": "github.com/lanzafame/go-libp2p-ocgorpc"
+  },
+  "gx": {
+    "dvcsimport": "github.com/lanzafame/go-libp2p-ocgorpc"
+  },
+  "gxVersion": "0.14.0",
+  "language": "go",
+  "license": "",
+  "name": "go-libp2p-ocgorpc",
+  "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
+  "version": "0.0.0"
+}
+
