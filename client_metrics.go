@@ -1,9 +1,9 @@
 package ocgorpc
 
 import (
-	"github.com/gxed/opencensus-go/stats"
-	"github.com/gxed/opencensus-go/stats/view"
-	"github.com/gxed/opencensus-go/tag"
+	"go.opencensus.io/stats"
+	"go.opencensus.io/stats/view"
+	"go.opencensus.io/tag"
 )
 
 // The following variables are measures are recorded by ClientHandler:

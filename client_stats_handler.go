@@ -4,11 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/gxed/opencensus-go/tag"
 	rpcstats "github.com/libp2p/go-libp2p-gorpc/stats"
+	"go.opencensus.io/tag"
 )
-
-type statsKey string
 
 // statsTagRPC gets the tag.Map populated by the application code, serializes
 // its tags into the gorpc metadata in order to be sent to the server.
@@ -26,7 +24,7 @@ func (h *ClientHandler) statsTagRPC(ctx context.Context, info *rpcstats.RPCTagIn
 	ts := tag.FromContext(ctx)
 	if ts != nil {
 		encoded := tag.Encode(ts)
-		ctx = context.WithValue(ctx, statsKey("gorpc-stats"), encoded)
+		ctx = context.WithValue(ctx, rpcDataKey, encoded)
 	}
 
 	return context.WithValue(ctx, rpcDataKey, d)

@@ -6,11 +6,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	ocstats "github.com/gxed/opencensus-go/stats"
-	"github.com/gxed/opencensus-go/stats/view"
-	"github.com/gxed/opencensus-go/tag"
 	logging "github.com/ipfs/go-log"
 	"github.com/libp2p/go-libp2p-gorpc/stats"
+	ocstats "go.opencensus.io/stats"
+	"go.opencensus.io/stats/view"
+	"go.opencensus.io/tag"
 )
 
 var logger = logging.Logger("p2p-gorpc")

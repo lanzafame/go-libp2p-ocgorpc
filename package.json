@@ -9,9 +9,21 @@
   "gxDependencies": [
     {
       "author": "hsanjuan",
-      "hash": "QmPaUAU3h94RXAnJAq7JPy3QhGbdHoLbBWkxdvZo1QxqUu",
+      "hash": "QmeZoNDg6yos4DESSzHsYNXKwjLomUxK2CL9PPxAjPj5iJ",
       "name": "go-libp2p-gorpc",
       "version": "1.1.0"
+    },
+    {
+      "author": "lanzafame",
+      "hash": "QmbVCxjc16GStPSdrad8gmuACWe4fPqp9se9nJuHbcVnz7",
+      "name": "grpc",
+      "version": "0.0.4"
+    },
+    {
+      "author": "lanzafame",
+      "hash": "QmVeXWtEBiL3XvWAsCqgiyDTQNuAuTCxpg6Q2LZfgD3RZ8",
+      "name": "opencensus-go",
+      "version": "0.0.2"
     }
   ],
   "gxVersion": "0.14.0",
@@ -19,6 +31,6 @@
   "license": "",
   "name": "go-libp2p-ocgorpc",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "0.0.1"
+  "version": "0.1.3"
 }
 

@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/libp2p/go-libp2p-gorpc/stats"
+
 	"go.opencensus.io/trace"
 )
 
@@ -33,13 +34,13 @@ var _ stats.Handler = (*ServerHandler)(nil)
 
 // HandleRPC implements per-RPC tracing and stats instrumentation.
 func (s *ServerHandler) HandleRPC(ctx context.Context, rs stats.RPCStats) {
-	// traceHandleRPC(ctx, rs)
+	traceHandleRPC(ctx, rs)
 	statsHandleRPC(ctx, rs)
 }
 
 // TagRPC implements per-RPC context management.
 func (s *ServerHandler) TagRPC(ctx context.Context, rti *stats.RPCTagInfo) context.Context {
-	// ctx = s.traceTagRPC(ctx, rti)
+	ctx = s.traceTagRPC(ctx, rti)
 	ctx = s.statsTagRPC(ctx, rti)
 	return ctx
 }

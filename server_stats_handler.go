@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/gxed/opencensus-go/tag"
 	"github.com/libp2p/go-libp2p-gorpc/stats"
+	"go.opencensus.io/tag"
 )
 
 // statsTagRPC gets the metadata from gorpc context, extracts the encoded tags from
@@ -29,13 +29,13 @@ func (h *ServerHandler) statsTagRPC(ctx context.Context, info *stats.RPCTagInfo)
 // extractPropagatedTags creates a new tag map containing the tags extracted from the
 // gorpc metadata.
 func (h *ServerHandler) extractPropagatedTags(ctx context.Context) *tag.Map {
-	buf, _ := ctx.Value(statsKey("grpc-stats")).([]byte)
+	buf, _ := ctx.Value(rpcDataKey).([]byte)
 	if buf == nil {
 		return nil
 	}
 	propagated, err := tag.Decode(buf)
 	if err != nil {
-		logger.Warningf("opencensus: Failed to decode tags from gorpc metadata failed to decode: %v", err)
+		logger.Errorf("opencensus: Failed to decode tags from gorpc metadata failed to decode: %v", err)
 		return nil
 	}
 	return propagated

@@ -1,9 +1,9 @@
 package ocgorpc
 
 import (
-	"github.com/gxed/opencensus-go/stats"
-	"github.com/gxed/opencensus-go/stats/view"
-	"github.com/gxed/opencensus-go/tag"
+	"go.opencensus.io/stats"
+	"go.opencensus.io/stats/view"
+	"go.opencensus.io/tag"
 )
 
 // The following variables are measures are recorded by ServerHandler:
@@ -51,7 +51,8 @@ var (
 	ServerCompletedRPCsView = &view.View{
 		Name:        "gorpc.libp2p.io/server/completed_rpcs",
 		Description: "Count of RPCs by method and status.",
-		TagKeys:     []tag.Key{KeyServerMethod, KeyServerStatus},
+		// TagKeys:     []tag.Key{KeyServerMethod, KeyServerStatus},
+		TagKeys:     []tag.Key{KeyServerMethod},
 		Measure:     ServerLatency,
 		Aggregation: view.Count(),
 	}
