@@ -14,16 +14,16 @@
       "version": "1.1.0"
     },
     {
-      "author": "lanzafame",
-      "hash": "QmbVCxjc16GStPSdrad8gmuACWe4fPqp9se9nJuHbcVnz7",
-      "name": "grpc",
-      "version": "0.0.4"
+      "author": "hsanjuan",
+      "hash": "QmP8ibs3yQcaPYwz3ZWggPeU6o8vb8iWQrY348zvP3XU6G",
+      "name": "go.opencensus.io",
+      "version": "0.19.0"
     },
     {
-      "author": "lanzafame",
-      "hash": "QmVeXWtEBiL3XvWAsCqgiyDTQNuAuTCxpg6Q2LZfgD3RZ8",
-      "name": "opencensus-go",
-      "version": "0.0.2"
+      "author": "hsanjuan",
+      "hash": "QmepWAVX9rZK5vufgGcvKcC1KHjNhNbEiQiN3XEpXGjgkc",
+      "name": "grpc-go",
+      "version": "1.18.0"
     }
   ],
   "gxVersion": "0.14.0",
@@ -31,6 +31,6 @@
   "license": "",
   "name": "go-libp2p-ocgorpc",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "0.1.3"
+  "version": "0.1.4"
 }
 
