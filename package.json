@@ -9,9 +9,9 @@
   "gxDependencies": [
     {
       "author": "hsanjuan",
-      "hash": "QmZhf82zn6zK8LkGHSRPLc8xMdgmzPUmHHD5TP1pF1PMCt",
+      "hash": "QmVjiHD4tj7KmJc5mfCJb8LVdwFFzBJzuKV65XB4wwGTrD",
       "name": "go-libp2p-gorpc",
-      "version": "1.1.2"
+      "version": "1.1.3"
     },
     {
       "author": "hsanjuan",
@@ -31,6 +31,6 @@
   "license": "",
   "name": "go-libp2p-ocgorpc",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "0.1.6"
+  "version": "0.1.7"
 }
 
